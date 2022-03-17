@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,#252727,#363636);
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+
+}
+
+form,header{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    padding:12px;
+    font-size: 32px;
+    border: none;
+    background: rgb(53, 53, 53);
+    color: white;
+}
+form input::placeholder{
+    color: white;
+}
+
+form input:active{
+    opacity: 0.8;
+}
+
+form button{
+    padding:12px;
+    font-size: 48px;
+    border: none;
+    background: linear-gradient(to right,#01BAEF,#21FA90);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form button:hover{
+    opacity: 0.6;
+}
+
+form button:active{
+    opacity: 0.8;
+}
+
+.todocontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todolist{
+    min-width: 30vh;
+    list-style: none;
+    width: 450px;
+}
+
+.todo{
+    margin: 20px;
+    background: rgb(87, 87, 87);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 32px;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    flex:1;
+}
+.complete-btn,.del-btn{
+    padding:12px;
+    font-size: 32px;
+    border: none;
+    background: linear-gradient(to right,#01BAEF,#21FA90);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    justify-content: right;  
+    cursor: pointer; 
+}
+
+.del-btn{
+    background: linear-gradient(to left,red,crimson);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.complete-btn:hover,.del-btn:hover{
+    opacity: 0.6;
+}
+.complete-btn:active,.del-btn:active{
+    opacity: 0.8;
+}
+
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+
+.todo.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.todo.fall{
+    transform:translateY(100px) rotateZ(30deg);
+    opacity: 0;
+}
